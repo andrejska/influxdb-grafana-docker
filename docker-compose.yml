@@ -22,3 +22,4 @@ services:
     environment:
       - GF_AUTH_ANONYMOUS_ENABLED=true
       - GF_DASHBOARDS_JSON_ENABLED=true
+      - GF_INSTALL_PLUGINS=grafana-piechart-panel

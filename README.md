@@ -16,6 +16,7 @@ http://localhost:3000
 * Telegraf with configuration file in project `telegraf/telegraf.conf`
 * Telegraf with Docker stats reading plug-in for local Docker host (for Mac and Linux)
 * Telegraf with metrics sending to InfluxDB
+* Grafana plug-in _Pie Chart panel_ installed 
 
 ## Useful commands
 ### InfluxDB
