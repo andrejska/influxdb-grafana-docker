@@ -6,9 +6,19 @@ services:
       - "8086:8086"
     environment:
       - INFLUXDB_DB=js_performance
+  telegraf:
+    image: telegraf:1.5.0
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf"
+    depends_on:
+      - influxdb
   grafana:
     build: ./grafana
     ports:
       - "3000:3000"
+    volumes:
+      - "./grafana/dashboards/:/var/lib/grafana/dashboards"
     environment:
       - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_DASHBOARDS_JSON_ENABLED=true
