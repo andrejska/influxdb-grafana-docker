@@ -8,7 +8,7 @@ InfluxDB and Grafana orchestrated by docker-compose
 http://localhost:3000
 
 ## Features
-* Grafana without without authentication for user with viewer's rights (default `admin/admin` for editor/admin) 
+* Grafana without authentication for user with admin's rights 
 * InfluxDB database `js_performance` configured as default data source for Grafana
 * InfluxDB database `telegraf` configured as data source for Grafana
 * Grafana dashboards are auto-imported from project directory `grafana/dashboards`
@@ -20,5 +20,5 @@ http://localhost:3000
 
 ## Useful commands
 ### InfluxDB
-Connect to InfluxDB shell
+Connect to InfluxDB shell:<br />
 `docker run --rm --network=influxdbgrafanadocker_default --link=influxdbgrafanadocker_influxdb_1 -it influxdb:1.4.2 influx --host influxdb`

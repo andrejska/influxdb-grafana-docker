@@ -21,5 +21,6 @@ services:
       - "./grafana/dashboards/:/var/lib/grafana/dashboards"
     environment:
       - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=admin
       - GF_DASHBOARDS_JSON_ENABLED=true
       - GF_INSTALL_PLUGINS=grafana-piechart-panel
