@@ -1,0 +1,2 @@
+#always convert line endings to LF on checkout (for correct docker image building on Windows)
+* text eol=lf
