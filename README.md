@@ -20,5 +20,5 @@ http://localhost:3000
 
 ## Useful commands
 ### InfluxDB
-Connect to InfluxDB shell:<br />
-`docker run --rm --network=influxdbgrafanadocker_default --link=influxdbgrafanadocker_influxdb_1 -it influxdb:1.4.2 influx --host influxdb`
+Connect to InfluxDB shell:   
+`docker run --rm --network=influxdbgrafanadocker_default --link=influxdbgrafanadocker_influxdb_1 -it influxdb:1.4.3 influx --host influxdb`
