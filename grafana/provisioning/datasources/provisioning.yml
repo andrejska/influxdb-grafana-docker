@@ -1,0 +1,24 @@
+# http://docs.grafana.org/administration/provisioning/
+apiVersion: 1
+datasources:
+- name: js_performance
+  type: influxdb
+  access: proxy
+  url: http://influxdb:8086
+  password: admin
+  user: admin
+  database: js_performance
+  isDefault: true
+  version: 1
+  editable: true
+
+- name: ${DS_INFLUXDB_TELEGRAF}
+  type: influxdb
+  access: proxy
+  url: http://influxdb:8086
+  password: admin
+  user: admin
+  database: telegraf
+  isDefault: false
+  version: 1
+  editable: true
