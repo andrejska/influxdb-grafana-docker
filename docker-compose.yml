@@ -7,14 +7,14 @@ services:
     environment:
       - INFLUXDB_DB=js_performance
   telegraf:
-    image: telegraf:1.5.2
+    image: telegraf:1.5.3
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf"
     depends_on:
       - influxdb
   grafana:
-    image: grafana/grafana:5.0.0
+    image: grafana/grafana:5.0.3
     ports:
       - "3000:3000"
     volumes:
