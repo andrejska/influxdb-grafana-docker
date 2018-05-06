@@ -2,7 +2,7 @@
 InfluxDB and Grafana orchestrated by docker-compose
 
 ## Start containers
-`docker-compose up -d`
+`docker-compose -p grafana up -d`
 
 ## Grafana
 http://localhost:3000
@@ -21,4 +21,4 @@ http://localhost:3000
 ## Useful commands
 ### InfluxDB
 Connect to InfluxDB shell:   
-`docker run --rm --network=influxdbgrafanadocker_default --link=influxdbgrafanadocker_influxdb_1 -it influxdb:1.4.3 influx --host influxdb`
+`docker run --rm --network=grafana_default --link=grafana_influxdb_1 -it influxdb:1.5.2 influx --host influxdb`
